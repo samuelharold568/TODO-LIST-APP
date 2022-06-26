@@ -1,0 +1,350 @@
+ * {
+	padding: 0;
+	margin: 0;
+	box-sizing: content-box;
+	letter-spacing: 1.5px;
+ }
+
+ body {
+	width: 100%;
+	height: auto;
+	background-color: #222831;
+ }
+
+ main {
+	position: relative;
+	display: grid;
+	justify-items: end;
+	grid-template-columns: 40% 30% 30%;
+	grid-template-rows: 5% 5% 90%;
+	gap: 10px 0px;
+	margin: 5px 30px;
+ }
+
+ header {
+	background-color: #E6CCA9;
+	height: 70px;
+ }
+
+ p {
+	text-align: center;
+ }
+
+ h1 {
+	color: #533535;
+	padding: 15px;
+	text-align: center;
+	font-family: 'Courier New', Courier, monospace;
+ }
+
+ input {
+	background-color: #393E46;
+	color: #C4B6B6;
+	border-width: 1px;
+	border-color: #222831;
+	border-radius: 5px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-left: 5px;
+	cursor: pointer;
+ }
+
+ button {
+	color: #222831;
+	border-width: 1px;
+	border-radius: 5px;
+	padding: 3px;
+	font-weight: bold;
+	width: 60px;
+ }
+
+ label, h2 {
+	color: #7E7474;
+ }
+
+ .input-book-add h2 {
+	position: absolute;
+	top: 5%;
+	left: 15%;
+ }
+ 
+ .section-uncompleted h2, 
+ .section-completed h2 {
+	text-align: center;
+	margin: 5px auto;
+	padding: 5px;
+	color: #E6CCA9;
+	border-bottom: 2px solid #222831;
+ }
+
+ .form-addBook {
+	display: grid;
+	grid-template-columns: 1fr 35px 1fr;
+	gap: 15px 5px;
+ }
+
+ .grid-display {
+	display: grid;
+ } 
+
+ .title,
+ .author,
+ .year {
+	grid-column: 1 / span 3;
+ }
+
+ .checkbox-uncompleted {
+	grid-column: 1 /  2;
+ }
+ 
+ .checkbox-completed {
+	grid-column: 3 / 4;
+ }
+
+ .checkBox {
+	display: inline-grid;
+	align-items: center;
+	grid-template-columns: repeat(2, 1fr); 
+	gap: 5px;
+ }
+
+ .add-button {
+	justify-items: center;
+	background-color: #588fe9;
+ }
+
+ .src-button {
+	 background-color: #FFD369;
+ }
+
+ .search {
+	display: flex;
+	justify-content: flex-end;
+	flex-wrap: nowrap;
+ }
+
+ .divContainerDelete {
+	display: flex;
+	position: fixed;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	padding: 0;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+ }
+
+ .attention {
+	grid-area: attention;
+	padding: 10px;
+	margin: auto;
+	color: #2B2B2B;
+	font-size: 21px;
+ }
+
+ .btnCancel {
+	grid-area: Cancel;
+	margin: auto;
+	background-color: #FFF5DA;
+ }
+
+ .btnDelete {
+	grid-area: Delete;
+	margin: auto;
+	background-color: #C84B31;
+ }
+
+ .divDelete {
+	display: grid;
+	grid-template-areas: 'attention attention'
+			     'Cancel Delete';
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #888;
+  	width: 30%;
+	height: 30%;
+	background-color: #E6CCA9;
+ }
+
+ .itemTask {
+	padding: 2px;
+	color: #423F3E;
+ }
+ 
+ .containerBook h3 {
+	text-align: center;
+	color: #2B2B2B;
+ }
+
+ .btnUndo {
+	margin: 10px auto;
+	background-color: #FFF5DA;
+	color: #2B2B2B;
+ }
+
+ .btnFinish {
+	margin: 10px auto;
+	background-color: #533535;
+	color: seashell;
+ }
+
+ .containerBook {
+	display: grid;
+	gap: 5px;
+	position: relative;
+	border: 1px solid #888;
+	border-radius: 5px;
+	margin: 15px;
+	background-color: #E6CCA9;
+ }
+
+ .deleteBtn {
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: .5px .5px .5px 2px;
+	font-Size: 30px;
+	color: #C84B31;
+	cursor: pointer;
+	background-color: #FFF5DA;
+	border-radius: 0 7px;
+	border-width: 0 0 1.5px 1.5px;
+	border-style: solid;
+	border-color: #D6D2C4;
+ }
+
+ #uncompletedBook {
+	overflow: auto;
+	height: 450px;
+ }
+
+ #completedBook {
+	overflow: auto;
+	height: 450px;
+ }
+
+ .input-book-add {
+	grid-area: 3 / 1 / span 2 / 2;
+	width: 400px;
+ }
+
+ .input-search {
+	margin-top: 27px;
+	grid-area: 1 / 3 / 2 / 4;
+ }
+
+ .deleteSection {
+	flex-wrap: wrap;
+	flex-direction: column;
+ }
+
+ .section-uncompleted {
+	grid-row-start: 3;
+	background-color: #393E46;
+	height: 500px;
+	width: 300px;
+	border-radius: 10px;
+ }
+
+ .section-completed {
+	grid-area: 3 / 3 / 4 / 4;
+	background-color: #393E46;
+	height: 500px;
+	width: 300px;
+	border-radius: 10px;
+ }
+
+ @media (max-width: 768px) {
+	main {	
+		grid-template-columns: 1fr;
+		grid-template-rows: 60px 250px 60px repeat(2, 350px);
+		justify-content: center;
+		justify-items: center;
+		gap: 15px 2px;
+		margin-bottom: 40px;
+	}
+
+	.input-book-add h2 {
+		top: 16px;
+		left: 20%;
+		margin: auto auto;
+		grid-row-start: 1;
+		grid-row-end: 2;
+		grid-column-start: 1;
+	}
+
+ 	.input-book-add {
+		width: 90vw;
+		grid-row-start: 2;
+		grid-row-end: 3;
+		grid-column-start: 1;
+	}
+
+ 	.input-search {
+		margin: auto auto;
+		grid-row-start: 3;
+		grid-row-end: 4;
+		grid-column-start: 1;
+	}
+
+	.section-uncompleted {
+		width: 80vw;
+		max-height: 350px;
+		grid-row-start: 4;
+		grid-row-end: 5;
+		grid-column-start: 1;
+	}
+	
+	.section-completed {
+		width: 80vw;
+		max-height: 350px;
+		grid-column-start: 1;
+		grid-row-start: 5;
+		grid-row-end: 6;
+	}
+
+	#uncompletedBook {
+		overflow: auto;
+		width: 98%;
+		height: 280px;
+ 	}
+
+ 	#completedBook {
+		overflow: auto;
+		width: 98%;
+		height: 280px;
+ 	}
+
+ 	.divDelete {
+		min-width: 300px;
+		min-height: 200px;
+ 	}
+ }
+
+ .add-button:hover {
+	background-color: #c3d8fc;
+	transition: 100ms ease-in;
+ }
+
+ .src-button:hover {
+	background-color: #fae8bf;
+	transition: 100ms ease-in;
+ }
+
+ .btnFinish:hover {
+	background-color: #a07f7f;
+	transition: 100mx ease-in;
+}
+
+ .btnUndo:hover {
+	 background-color: #8f7272;
+	 transition: 100mx ease-in;
+ }
+
+ .deleteBtn:hover, .btnCancel:hover, .btnDelete:hover {
+	box-shadow: 6px 6px 5px rgba(2, 2, 2, 0.2) inset;
+	transition: 100ms ease-in;
+ }

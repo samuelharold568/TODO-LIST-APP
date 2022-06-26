@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport"
+ content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>TodoListApps</title>
+      <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+      <header>
+        <h1>TodoList Apps</h1>
+      </header>
+      <main>
+        <section class="input-book-add">
+          <h2>Create new Book</h2>
+          <form id="resetInput" class="form-addBook">
+            <div class="grid-display title">
+              <label for="inputBookTitle">Title</label>
+              <input id="inputBookTitle" class="myInput" type="text" name="inputBookTitle">
+            </div>
+            <div class="grid-display author">
+              <label for="inputBookAuthor">Author</label>
+              <input  id="inputBookAuthor" class="myInput" type="text" name="inputBookAuthor" required>            
+	          </div>
+            <div class="grid-display year">
+              <label for="inputBookYear">Year</label>
+              <input id="inputBookYear" class="myInput" type="date" name="inputBookYear" required>
+            </div>
+            <div class="checkBox checkbox-uncompleted">              
+              <label for="inputUncompleted">Uncompleted</label>
+              <input id="inputUncompleted" type="checkbox">
+	          </div>
+            <div class="checkBox checkbox-completed">
+              <label for="inputCompleted">Completed</label>
+              <input id="inputCompleted" type="checkbox">
+            </div>
+            <button id="newBook" class="add-button" type="submit">add</button>
+          </form>
+        </section>
+	      <section class="deleteSection">
+	      </section>
+        <section class="input-search">
+          <form id="searchInputReset" class="search">
+            <input  id="searchInput" type="text" placeholder="Title..">
+	          <button id="searchButton" class="src-button" type="submit">search</i></button>
+          </form>
+        </section>
+        <section class="section-uncompleted">
+          <h2>Uncompleted</h2>
+          <div id="uncompletedBook" class="book-uncompleted">
+          </div>
+        </section>
+        <section class="section-completed">
+          <h2>Completed</h2>
+          <div id="completedBook" class="book-completed">
+          </div>
+        </section>
+      </main>
+      <script src="data.js"></script>
+      <script src="main.js"></script>
+    </body>
+  </html>
